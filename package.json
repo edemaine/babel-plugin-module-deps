@@ -1,0 +1,26 @@
+{
+  "name": "babel-plugin-module-deps",
+  "version": "0.0.0",
+  "description": "Babel plugin to annotate CJS modules with what they require",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "coffee --bare -c index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edemaine/babel-plugin-module-deps.git"
+  },
+  "author": {
+    "name": "Erik Demaine",
+    "email": "edemaine@mit.edu",
+    "url": "http://erikdemaine.org/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edemaine/babel-plugin-module-deps/issues"
+  },
+  "homepage": "https://github.com/edemaine/babel-plugin-module-deps#readme",
+  "devDependencies": {
+    "coffeescript": "^2.7.0"
+  }
+}
