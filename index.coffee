@@ -17,16 +17,6 @@ module.exports = ({types}) ->
                 types.sequenceExpression [
                   types.callExpression(
                     types.memberExpression(
-                      types.identifier 'console'
-                      types.identifier 'log'
-                    )
-                    [
-                      types.identifier '__filename'
-                      types.identifier 'id'
-                    ]
-                  )
-                  types.callExpression(
-                    types.memberExpression(
                       types.memberExpression(
                         types.identifier 'module'
                         types.identifier 'deps'
