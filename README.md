@@ -45,7 +45,7 @@ If you've just run `require(modname)` with
 configured to run this plugin, then calling the function below as
 `walkDeps(modname)` should give an array of all recursive module dependencies
 that `modname` `require`s or `import`s as `require.resolve`d filenames
-(including `require.resolve(modname)` itself`, but excluding duplicates).
+(including `require.resolve(modname)` itself, but excluding duplicates).
 
 ```js
 function walkDeps(modname) {
@@ -54,7 +54,7 @@ function walkDeps(modname) {
     deps[submodname] = true;
     const submod = require.cache[submodname];
     if (!submod) return;
-    const subdeps = require.cache[submodname].deps;
+    const subdeps = submod.deps;
     if (!subdeps) return;
     for (dep of subdeps)
       if (!dep in deps)
