@@ -1,7 +1,8 @@
 # babel-plugin-module-deps
 
-This Babel plugin redefines `require` within all (CJS) modules to record any
-required modules in an array of resolved filenames called `module.deps`.
+This [Babel](https://babeljs.io/) plugin redefines `require`
+within all (CJS) modules to record any required modules
+in an array of resolved filenames called `module.deps`.
 (Note that the array may have duplicates.)
 It only works with
 [Node.js CommonJS modules](https://nodejs.org/api/modules.html)
@@ -16,6 +17,10 @@ should be called according to whether a generated file is older
 than the module or dependency code.
 
 ## Usage
+
+Either compile all your code via Babel and run the compiled code, or use
+[@babel/register](https://babeljs.io/docs/en/babel-register/)
+to automatically run Babel as you `require` modules.
 
 Add the module as a plugin to your Babel configuration, as in:
 
@@ -40,9 +45,7 @@ where `filename` is the `require.resolve`d filename for a module.
 
 ## Recursive Dependencies
 
-If you've just run `require(modname)` with
-[@babel/register](https://babeljs.io/docs/en/babel-register/)
-configured to run this plugin, then calling the function below as
+If you've just run `require(modname)`, then calling the function below as
 `walkDeps(modname)` should give an array of all recursive module dependencies
 that `modname` `require`s or `import`s as `require.resolve`d filenames
 (including `require.resolve(modname)` itself, but excluding duplicates).
