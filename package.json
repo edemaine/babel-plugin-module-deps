@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-module-deps",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Babel plugin to annotate CJS modules with what they require",
   "main": "index.js",
   "scripts": {
