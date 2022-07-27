@@ -6,12 +6,12 @@ module.exports = ({types}) ->
       undefined
   post: ->
     ## Prepend JavaScript code:
-    ## require = ((r) =>
-    ##   Object.assign(
-    ##     (id) => (module.deps.push(r.resolve(id)), r(id)),
-    ##     r
-    ##   )
-    ## )(require);
+    ##     require = ((r) =>
+    ##       Object.assign(
+    ##         (id) => (module.deps.push(r.resolve(id)), r(id)),
+    ##         r
+    ##       )
+    ##     )(require);
     ## The `Object.assign` copies over enumerable properties
     ## (`resolve`, `main`, `extensions`, `cache`) from the `require` object
     ## to the new function which pushes to `module.deps` and calls `require`.
