@@ -15,6 +15,9 @@ each module depends on, by inspecting `require.cache[filename].deps`.
 This can be useful to deep-reload a module, or to detect when a module
 should be called according to whether a generated file is older
 than the module or dependency code.
+For example, [SVG Tiler](https://github.com/edemaine/svgtiler)
+uses this plugin to determine when to rebuild figures whose symbols are
+defined by JavaScript or CoffeeScript files.
 
 ## Usage
 
